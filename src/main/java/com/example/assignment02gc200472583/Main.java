@@ -7,21 +7,20 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Main {
-//    @Override
-//    public void start(Stage stage) throws IOException {
-//        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("hello-view.fxml"));
-//        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-//        stage.setTitle("Hello!");
-//        stage.setScene(scene);
-//        stage.show();
-//    }
+public class Main extends Application {
+    @Override
+    public void start(Stage stage) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("character-explorer-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setTitle("Character Explorer");
+        stage.setScene(scene);
+        stage.show();
+    }
 
     public static void main(String[] args) {
 
-//        launch();
+        launch();
         // ApiResponse apiResponse = APIUtility.getCharactersFromJSONFile("apiResponse.json");
         ApiResponse apiResponse = APIUtility.getCharactersFromThronesAPI();
-        System.out.println(apiResponse);
     }
 }

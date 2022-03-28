@@ -41,4 +41,9 @@ public class Character {
     public String getImageUrl() {
         return imageUrl;
     }
+
+    public String toString()
+    {
+        return String.format(fullName);
+    }
 }

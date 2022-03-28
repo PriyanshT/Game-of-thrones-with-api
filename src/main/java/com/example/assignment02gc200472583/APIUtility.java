@@ -45,7 +45,6 @@ public class APIUtility {
 
             String responseInString = response.body();
             responseInString = "{\"characters\": " + responseInString + "}";
-            System.out.println(responseInString);
 
             Gson gson = new Gson();
             return gson.fromJson(responseInString, ApiResponse.class);
