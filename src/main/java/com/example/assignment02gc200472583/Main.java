@@ -20,7 +20,8 @@ public class Main {
     public static void main(String[] args) {
 
 //        launch();
-        ApiResponse apiResponse = APIUtility.getCharactersFromJSONFile("apiResponse.json");
+        // ApiResponse apiResponse = APIUtility.getCharactersFromJSONFile("apiResponse.json");
+        ApiResponse apiResponse = APIUtility.getCharactersFromThronesAPI();
         System.out.println(apiResponse);
     }
 }

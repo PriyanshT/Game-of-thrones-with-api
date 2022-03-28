@@ -4,6 +4,12 @@ import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
 
 import java.io.FileReader;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class APIUtility {
     /*
@@ -26,5 +32,29 @@ public class APIUtility {
         }
 
         return response;
+    }
+
+    public static ApiResponse getCharactersFromThronesAPI()
+    {
+        String uri = "https://thronesapi.com/api/v2/Characters";
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest httpRequest = HttpRequest.newBuilder().uri(URI.create(uri)).build();
+
+        try {
+            HttpResponse<String> response = client.send(httpRequest, HttpResponse.BodyHandlers.ofString());
+
+            String responseInString = response.body();
+            responseInString = "{\"characters\": " + responseInString + "}";
+            System.out.println(responseInString);
+
+            Gson gson = new Gson();
+            return gson.fromJson(responseInString, ApiResponse.class);
+
+        }catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+
+        return null;
     }
 }
