@@ -34,6 +34,9 @@ public class APIUtility {
         return response;
     }
 
+    /*
+     * A method which parse JSON objects from api directly
+     */
     public static ApiResponse getCharactersFromThronesAPI()
     {
         String uri = "https://thronesapi.com/api/v2/Characters";

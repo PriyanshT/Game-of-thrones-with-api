@@ -7,5 +7,5 @@ public class ApiResponse {
 
     public Character[] getCharacters() {
         return characters;
-    }
+}
 }
