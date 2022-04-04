@@ -11,7 +11,6 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assignment02gc200472583.CharacterInfoViewController">
    <children>
       <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -19,7 +18,7 @@
             <Label fx:id="characterNameLabel" prefHeight="47.0" prefWidth="88.0" text="Character Name" BorderPane.alignment="CENTER" />
          </top>
          <bottom>
-            <Button fx:id="goBackButton" mnemonicParsing="false" prefHeight="34.0" prefWidth="74.0" text="Go Back" BorderPane.alignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#goBack" prefHeight="34.0" prefWidth="74.0" text="Go Back" BorderPane.alignment="CENTER">
                <BorderPane.margin>
                   <Insets bottom="20.0" />
                </BorderPane.margin>
@@ -49,9 +48,9 @@
                         <Label text="Family (House)" GridPane.rowIndex="4" />
                         <Label fx:id="firstNameLabel" text="Label" GridPane.columnIndex="1" />
                         <Label fx:id="lastNameLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Label fx:id="FullNameLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label fx:id="fullNameLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                         <Label fx:id="titleLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                        <Label fx:id="FamilyLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label fx:id="familyLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                      </children>
                   </GridPane>
                </children>

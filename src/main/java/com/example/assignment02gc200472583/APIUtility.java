@@ -46,11 +46,38 @@ public class APIUtility {
         try {
             HttpResponse<String> response = client.send(httpRequest, HttpResponse.BodyHandlers.ofString());
 
+            // Appended the response body string to make api easily usable
             String responseInString = response.body();
             responseInString = "{\"characters\": " + responseInString + "}";
 
             Gson gson = new Gson();
             return gson.fromJson(responseInString, ApiResponse.class);
+
+        }catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+    /*
+     * A method which get api object from the id
+     */
+    public static Character getCharacterInfo(int id)
+    {
+        String uri = "https://thronesapi.com/api/v2/Characters/" + id;
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest httpRequest = HttpRequest.newBuilder().uri(URI.create(uri)).build();
+
+        try {
+            HttpResponse<String> response = client.send(httpRequest, HttpResponse.BodyHandlers.ofString());
+
+            //String responseInString = response.body();
+            //responseInString = "{\"characters\": " + responseInString + "}";
+
+            Gson gson = new Gson();
+            return gson.fromJson(response.body(), Character.class);
 
         }catch (Exception e)
         {
