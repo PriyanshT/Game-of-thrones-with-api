@@ -1,0 +1,30 @@
+.root {
+    -fx-font-size: 13px;
+    -fx-font-family: "Book Antiqua";
+    -fx-background-color: #96584B;
+}
+
+#header {
+    -fx-font-size: 30px;
+    -fx-text-fill: #FFFFFF;
+    -fx-label-padding: 5px;
+}
+
+.label {
+    -fx-text-fill: white;
+}
+
+.choice-box .label {
+    -fx-text-fill: black;
+}
+
+.button {
+    -fx-border-color: green;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+}
+
+.button:hover{
+    -fx-background-color: green;
+    -fx-text-fill: white;
+}
