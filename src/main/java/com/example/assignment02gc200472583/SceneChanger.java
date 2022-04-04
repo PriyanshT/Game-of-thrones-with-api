@@ -16,7 +16,7 @@ public class SceneChanger {
         // To check if scene changing is not with id-character utility
         if(id != -1) {
             CharacterInfoViewController controller = fxmlLoader.getController();
-            controller.loadCharacterDetails(id);
+            controller.loadCharacterDetails(id, event);
         }
 
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();

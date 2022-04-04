@@ -15,7 +15,7 @@
    <children>
       <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
-            <Label fx:id="characterNameLabel" prefHeight="47.0" prefWidth="88.0" text="Character Name" BorderPane.alignment="CENTER" />
+            <Label fx:id="characterNameLabel" alignment="CENTER" prefHeight="47.0" prefWidth="176.0" text="Character Name" textAlignment="CENTER" BorderPane.alignment="CENTER" />
          </top>
          <bottom>
             <Button mnemonicParsing="false" onAction="#goBack" prefHeight="34.0" prefWidth="74.0" text="Go Back" BorderPane.alignment="CENTER">

@@ -2,10 +2,13 @@ package com.example.assignment02gc200472583;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 
@@ -39,11 +42,17 @@ public class CharacterInfoViewController {
 
     private Character character;
 
-    public void loadCharacterDetails(int id)
+    public void loadCharacterDetails(int id, ActionEvent event)
     {
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+
         //System.out.println(id);
         character = APIUtility.getCharacterInfo(id);
 
+        // to change the window title and favicon
+        stage.setTitle(character.getFirstName());
+
+        // to change all the labels and image
         characterNameLabel.setText(character.getFullName());
         firstNameLabel.setText(character.getFirstName());
         lastNameLabel.setText(character.getLastName());
